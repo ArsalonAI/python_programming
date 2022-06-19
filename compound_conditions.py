@@ -102,3 +102,30 @@ T T T -> T and T or T = True
 '''
 
 # the answer is 5 combinations lead to 'True' 
+
+
+'''
+set values of w, x, y, and such that all the condition_ variables evalute to True. 
+w = True
+x = True
+y = False
+z = F
+
+# Don't change any of these `condition_` variables.
+condition_1 = w and x and not y or not z
+condition_2 = not (w and not w)
+condition_3 = not (w and y or y)
+condition_4 = x and (y or z and w)
+
+# All of these should print `True`.
+print(condition_1)
+print(condition_2)
+print(condition_3)
+print(condition_4)
+
+
+not (w) or (w) = True
+not (w and y) and not (y) = True
+not (w) or not (y) and not (y) = True
+True and (False ors )
+'''

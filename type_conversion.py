@@ -24,3 +24,5 @@ print(type(d), e + d)
 number = input("please enter your favorite number: ")
 result = int(number) + 25
 print("The result it", result)
+
+

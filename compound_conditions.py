@@ -109,7 +109,7 @@ set values of w, x, y, and such that all the condition_ variables evalute to Tru
 w = True
 x = True
 y = False
-z = F
+z = True
 
 # Don't change any of these `condition_` variables.
 condition_1 = w and x and not y or not z
@@ -127,5 +127,5 @@ print(condition_4)
 not (w) or (w) = True
 not (w and y) and not (y) = True
 not (w) or not (y) and not (y) = True
-True and (False ors )
+True and (False or True and True)
 '''

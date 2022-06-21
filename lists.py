@@ -65,4 +65,26 @@ print(b)
 lst = [[1, 2, 3], [ 4, 5, [False]], [7, 8, True]]
 print(lst[-1]) # gives us list at this index
 print(lst[-1][-1]) # gives us last element in the last list "True" 
-print(lst[1][-1][0])
+print(lst[1][-1][0]) # gives us the list at index "1", last element, first element in the sublist 
+
+
+# excercise - 
+str1 = input("Enter a string: ")
+str2 = input("Enter a string: ")
+str3 = input("Enter a string: ")
+str4 = input("Enter a string: ")
+str5 = input("Enter a string: ")
+lst = []
+lst.append(str1)
+lst.append(str2)
+lst.append(str3)
+lst.append(str4)
+lst.append(str5)
+
+idx_1 = int(input("Enter a number: "))
+idx_2 = int(input("Enter a number: "))
+idx_3 = int(input("Enter a number: "))
+
+
+lst2 = lst[idx_1] + lst[idx_2] + lst[idx_3]
+print(lst2)

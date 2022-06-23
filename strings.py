@@ -19,7 +19,7 @@ str_lowercase = str.lower()
 print(str_lowercase)
 
 # validate user input by converting to all lowercase 
-'''
+
 
 user_input = input("What is my name? ")
 
@@ -28,13 +28,13 @@ if user_input.lower() == "arsalon":
 else: 
     print("nope, not correct")
 
-'''
+
 
 # Capitalize first letter
 str2 = "arsalon"
 print(str2.capitalize())
 
-# in operator - see if the string contains a specific character
+# IN operator - see if the string contains a specific character
 is_present = "a" in str2
 print(is_present)
 
@@ -56,7 +56,7 @@ else:
     print("it's not a digit")
 
 
-# split method - split string into individual elements based on deliminator (default it's a space)
+# split method - split string into individual elements based on deliminator, deliminator is removed (default it's a space)
 
 s = "Hello I am Arsalon"
 words = s.split()
@@ -105,3 +105,25 @@ str_list = ["A", "R", "S", "A", "L", "o", "n"]
 
 combined_str = "-".join(str_list)
 print(combined_str)
+
+
+# excercise - remember strings are imutable, each operation must create a new string
+num = input("Enter an integer: ")
+
+if num.isdigit():
+    name = input("What is your name? ")
+    upper_name = name.upper()
+    print(f"Hello, {upper_name}")
+else: 
+    capital_input = num.capitalize()
+    print(capital_input)
+
+# excercise - 
+word_one = input("Enter a word: ")
+word_two = input("Enter another word: ")
+
+
+if word_one in word_two:
+    print("The first word is contained in the second one")
+else: 
+    print("The first word isn't contained in the second one")

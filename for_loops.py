@@ -146,3 +146,40 @@ for word in words:
         break
 else:
     print("I didn't find the word")
+
+#use a single for loop to iterate through two strings and print all matching characters
+string1 = "aabbcsdw"
+string2 = "abbbcsdd"
+
+for idx in range(len(string1)):
+    letter_one = string1[idx]
+    letter_two = string2[idx]
+
+    if letter_one == letter_two:
+        print (letter_one)
+
+# use a single for loop to iterate a list and print the elements that are both divisible by 2 and located at odd idx
+
+lst_example = [45, 24, 22, 1, 45, 2, 12, 13, 16, 10, 0, -7]
+
+for idx, element in enumerate(lst_example):
+    if element % 2 == 0 and idx % 2 > 0:
+        print(element)
+
+# use nested for loops to iterate a list, which contains sub lists, and print the sums of the sublists
+lst = [[2, 3, 4], [-2, -4, 0], [1, 2], [1, 1, 1, 5, 6], [0, 9, 8, 7]]
+
+for i in range(len(lst)):
+    inner_list = lst[i]
+    sum = 0
+    for j in range (len(inner_list)):
+        sum += inner_list[j]
+    print(sum) 
+
+# use a single for loop to iterate a list and for each element in the list, print the sum of the element + number to it's right
+lst = [-2, 0, 4, 5, 1, 2]
+
+
+for i in range(len(lst)-1):
+    sum = lst[i] + lst[i+1]
+    print(sum)

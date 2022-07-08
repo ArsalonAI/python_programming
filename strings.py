@@ -127,3 +127,11 @@ if word_one in word_two:
     print("The first word is contained in the second one")
 else: 
     print("The first word isn't contained in the second one")
+
+
+
+# Excercise - 
+sentence = input("Enter a sentence: ")
+num_words = sentence.count(" ")
+print(f"There are {num_words + 1} words in this sentence")
+

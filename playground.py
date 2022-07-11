@@ -1,16 +1,11 @@
 
-word_length_sum = 0
-word_count = 0
+#write a while loop to print the squares of the numbers: 1, 3, 6, 10, 15 and 21
 
-while True:
-    word = input("Enter a word: ")
+nums = [1, 3, 6, 10, 15, 21]
+i = 0
 
-    if word == "q" or word == "quit":
-        break;
+while i < len(nums):
+    square = nums[i] * nums[i]
+    print(square)
+    i += 1
 
-    word_length_sum += len(word)
-    word_count += 1 
-
-if word_count > 0: 
-    average_word_length = word_length_sum / word_count
-    print(f"The average word length is: {average_word_length}.")

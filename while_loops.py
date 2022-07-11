@@ -67,4 +67,15 @@ while idx < len(lst):
     idx +=1
 else:
     print("didn't find it")
-    
+
+
+# write a program that continually asks the user for input until they enter 5, then displays the number of times they entered a number
+count = 0 
+
+while True:
+    num = int(input("Enter a number: "))
+    count += 1
+    if num == 5:
+        break
+
+print(f"You entered {count} numbers.")

@@ -1,1 +1,35 @@
-this section is
+This section is about object oriented programming in python
+
+OOP applies to other languages - Java, C++, etc. 
+OOP concepts the same, different syntax 
+
+OOP - interaction of objects in a programs
+
+
+Integer Class - is a class for the integers. 
+Class defines how objects can interact in a program.
+Try adding Integer class w/ a String class, get an error (cannot add integer to string)
+
+String class has a method called upper() it cannot work on String.
+
+Function class - Functions are objects - a function is an instance of the Function class
+
+What is a class? 
+a blueprint that defines how an instance of itself can behave in a program
+Ex. "hello" is an instance of the String class, I can run method "hello".upper() 
+
+
+What is an instance? 
+existance of an object of a specific class 
+
+Car class has an instance (object) called mercedes 
+
+What is a method? 
+function that acts on an instance of a class 
+Ex. .lower from String class, acts on an instance (word) of the string class
+
+Data Type Classes:
+all data types in python are an instance of a data type class
+Ex. Integer, Boolean, List, Dictionary, Set, Float are all classes with methods (that act on specific instances)
+
+

@@ -1,5 +1,5 @@
 
-# create a function inside class 
+# instance methods are functions defined inside a class that act on a specific instance (self) 
 # all instance methods require self as first parameter 
 # define all attributes in constructor, if not using yet, set to None vs. having "setter" method in class
 
@@ -27,3 +27,35 @@ person1.set_age(25)
 print(person1.get_age())
 
 
+class Counter:
+    def __init__(self):
+        self.count = 0
+        self.locked = False
+
+    def toggle_lock(self):
+        self.locked = not self.locked 
+
+    def increment(self):
+        if self.locked:
+            raise Exception("Counter is locked")
+        self.count += 1
+    
+    def decriment(self):
+        if self.locked:
+            raise Exception("Counter is locked")
+        self.count -= 1
+
+    def print_count(self):
+        print(f"The current count is {self.count}")
+
+counter1 = Counter()
+
+
+x = 0 
+while x < 10: 
+    counter1.increment()
+    counter1.print_count()
+    x+=1
+
+counter1.toggle_lock()
+counter1.increment()

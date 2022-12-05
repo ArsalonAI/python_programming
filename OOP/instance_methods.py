@@ -1,7 +1,8 @@
-
-# instance methods are functions defined inside a class that act on a specific instance (self) 
-# all instance methods require self as first parameter 
-# define all attributes in constructor, if not using yet, set to None vs. having "setter" method in class
+# Instances Methods
+# functions defined inside a class, that act on instances of the class
+# can access attributes associated with specific instance
+# ex. constructor def __init__(self)
+# always need "self" (hidden parameter) as first parameter in instance method func definition
 
 
 class Person: 
@@ -12,19 +13,12 @@ class Person:
     def say_hello(self):
         print(f"Hello, {self.name}")
 
-    # don't set attributes this way, instanciate to none in constructor to avoid error
+    # setter - don't define new attribute in method like this (instanciate to None in constructor to avoid errors)
     def set_age (self, age):
         self.age = age
-    
 
     def get_age(self):
         return self.age 
-
-
-person1 = Person("arsalon")
-person1.say_hello()
-person1.set_age(25)
-print(person1.get_age())
 
 
 class Counter:
@@ -48,18 +42,6 @@ class Counter:
     def print_count(self):
         print(f"The current count is {self.count}")
 
-counter1 = Counter()
-
-
-x = 0 
-while x < 10: 
-    counter1.increment()
-    counter1.print_count()
-    x+=1
-
-counter1.toggle_lock()
-counter1.increment()
-
 
 class Rectangle:
     def __init__(self, x, y, width, height):
@@ -78,5 +60,3 @@ class Rectangle:
 
     def get_area(self):
         return self.width * self.height
-
-        

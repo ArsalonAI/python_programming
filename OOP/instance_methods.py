@@ -1,8 +1,4 @@
-# Instances Methods
-# functions defined inside a class, that act on instances of the class
-# can access attributes associated with specific instance
-# ex. constructor def __init__(self)
-# always need "self" (hidden parameter) as first parameter in instance method func definition
+
 
 
 class Person: 
@@ -60,3 +56,27 @@ class Rectangle:
 
     def get_area(self):
         return self.width * self.height
+
+
+class Group:
+    def __init__(self, name, members=[]):
+        self.name = name
+        self.members = members
+
+    def add (self, name):
+        self.members += name 
+    
+    def delete (self, name):
+        if name in self.members:
+            self.members.remove(name)
+        else:
+            raise Exception ("Member not in group.")
+
+    def get_members(self):
+        return sorted(self.members)
+
+    def merge(self, group):
+        combined_members = self.members + group.members
+        new_group = Group("Name", combined_members)
+        return new_group
+

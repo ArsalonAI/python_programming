@@ -1,10 +1,3 @@
-# properties 
-# allow us to enforce specific behavior when accessing / modifying attributes (get / set)
-
-# private attribute
-# data (attribute) that can only be modified from within the class (using a method)
-# self._salary - using an underscore denotes private (however, it's not actually enforced in the syntax) just a convention
-# use a setter method to set salary 
 
 class Employee:
     def __init__(self, name):
@@ -19,11 +12,12 @@ class Employee:
     def get_salary(self):
         return round(self._salary)
 
+    salary = property(get_salary, set_salary)
+
     # property func - legacy way 
     # allow us to use dot notation syntax vs. set_salary/get_salary when working with attribute outside of class 
     # using dot notation calls the get_salary and set_salary (under the hood)
-    salary = property(get_salary, set_salary)
-
+    
 
 e = Employee("Arsalon")
 e.salary = 101000 
@@ -76,4 +70,23 @@ class BankAccount:
 
         self._balance = balance 
 
-# using properties
+# using properties 
+class BankAccount:
+    def __init__(self, account_holder_name):
+        self.account_holder_name = account_holder_name
+        self._balance = 0
+
+    @property
+    def balance(self):
+        return round (self._balance)
+
+    @balance.setter
+    def balance(self, balance):
+        if type(balance) not in [int, float]:
+            return
+        elif balance < 0:
+            return
+        elif balance >= 100000:
+            return
+
+        self._balance = balance 

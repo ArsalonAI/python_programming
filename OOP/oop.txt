@@ -32,4 +32,43 @@ Data Type Classes:
 all data types in python are an instance of a data type class
 Ex. Integer, Boolean, List, Dictionary, Set, Float are all classes with methods (that act on specific instances)
 
+# Classes - blueprints for objects (attributes / methods) 
+# Class becomes a new datatype in program
+# Purpose of Classes:
 
+# encapsulate common behavior between instance of an object 
+# grouping related behavior together in a class
+
+# Class Naming Convention
+# use PascalCase
+# PEP-8 (python style guide) says use PascalCase when naming classes in python programs
+
+
+# Class Constructor 
+# __init__ method -> auto called upon instantiation, instance attributes set in constructor using self keyword
+# self parameter - references instance of class
+
+# Instance Attributes
+# Data associated with an instance of an object
+# create new instance attribute using self.attribute = attribute 
+
+# Class Attributes
+# data associated with a class, shared by all instances of a class 
+
+# properties 
+# allow us to enforce specific behavior when accessing / modifying attributes (get / set)
+
+# private attribute
+# data (attribute) that can only be modified from within the class (using a method)
+# self._salary - using an underscore denotes private (however, it's not actually enforced in the syntax) just a convention
+# use a setter method to set salary 
+
+
+# Instances Methods
+# functions defined inside a class, that act on instances of the class
+# can access attributes associated with specific instance
+# ex. constructor def __init__(self)
+# always need "self" (hidden parameter) as first parameter in instance method func definition
+
+Class method - 
+associated with class, doesn't have access to instance attributes, not associated with instances

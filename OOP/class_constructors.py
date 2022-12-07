@@ -1,26 +1,3 @@
-# Classes - blueprints for objects (attributes / methods) 
-# Class becomes a new datatype in program
-# Purpose of Classes:
-
-# encapsulate common behavior between instance of an object 
-# grouping related behavior together in a class
-
-# Class Naming Convention
-# use PascalCase
-# PEP-8 (python style guide) says use PascalCase when naming classes in python programs
-
-
-# Class Constructor 
-# __init__ method -> auto called upon instantiation, instance attributes set in constructor using self keyword
-# self parameter - references instance of class
-
-# Instance Attributes
-# Data associated with an instance of an object
-# create new instance attribute using self.attribute = attribute 
-
-# Class Attributes
-# data associated with a class, shared by all instances of a class 
-
 
 class Person:
     def __init__(self, name, age, gender):

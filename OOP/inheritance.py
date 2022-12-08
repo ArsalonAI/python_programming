@@ -10,6 +10,11 @@ class Person:
 
 # Employee (child class, derived class) - inherits from Person (parent class, super class)
 class Employee (Person):
+    #over-ride constructor of super class 
+    def __init__(self, first_name, last_name, salary):
+        super().__init__(first_name, last_name)
+        self.salary = salary
+        
     def test(self):
         print("test")
         
@@ -17,10 +22,11 @@ class Employee (Person):
     def say_hello(self):
         print("-----")
         super().say_hello() #access base class method (use it here)
+        print(f"and my annual salary is {self.salary}")
         print("-----")
         
         
-e = Employee("Arsalon", "Amini")
+e = Employee("Arsalon", "Amini", 101000)
 e.say_hello()
 
    

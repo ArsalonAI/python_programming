@@ -70,8 +70,15 @@ Ex. Integer, Boolean, List, Dictionary, Set, Float are all classes with methods 
 # ex. constructor def __init__(self)
 # always need "self" (hidden parameter) as first parameter in instance method func definition
 
-Class method - 
+Class method 
 associated with class, doesn't have access to instance attributes, not associated with instances
 
 # class attributes - associated directly with class, don't use "self" keyword
 # class method - use @classmethod decorator and pass cls as first arg, can only access class attribute
+
+
+# Static Methods
+# A method inside a class, doesn't have access to "cls" or "self" keyword
+# function that belongs to class, organize related code, utility code inside specific classes
+# many classes don't initialize, just contain static methods 
+# should work independtly of any other attributes (technically can access instance/class methods but DONT)

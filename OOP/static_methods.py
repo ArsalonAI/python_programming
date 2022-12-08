@@ -1,10 +1,23 @@
 
 
 class Student: 
+    grade_bump = 2.0
+    
     def __init__(self, name, grades=[]):
         self.name = name
         self.grades = grades
-        
+      
+    #instance method - takes 'self' can access grades directly from instance  
+    def average (self):
+        return sum(self.grades / len(self.grades))
+    
+    @classmethod
+    def average_from_grades_plus_bump(cls, grades):
+        #can use static method inside class method 
+        average = cls.average_from_grades(grades)
+        #takes the min value either bumped avg or 100 (doesn't allow to go over 100%)
+        return min(average + 2.0, 100)
+    
     @staticmethod
     def average_from_grades(grades):
         return sum(grades)/len(grades)

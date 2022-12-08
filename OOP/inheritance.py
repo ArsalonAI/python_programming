@@ -1,4 +1,5 @@
 
+# Base Class (super class)
 class Person:
     def __init__(self, first_name, last_name):
          self.first_name = first_name
@@ -7,10 +8,16 @@ class Person:
     def say_hello(self):
         print(f"Hi my name is {self.first_name} {self.last_name}")
 
-# Employee (child class, derived class) inherits from Person (parent class, super class)
+# Employee (child class, derived class) - inherits from Person (parent class, super class)
 class Employee (Person):
     def test(self):
         print("test")
+        
+    #polymorphism - over-ride super class method definition    
+    def say_hello(self):
+        print("-----")
+        super().say_hello() #access base class method (use it here)
+        print("-----")
         
         
 e = Employee("Arsalon", "Amini")

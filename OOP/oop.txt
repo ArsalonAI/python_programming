@@ -72,3 +72,6 @@ Ex. Integer, Boolean, List, Dictionary, Set, Float are all classes with methods 
 
 Class method - 
 associated with class, doesn't have access to instance attributes, not associated with instances
+
+# class attributes - associated directly with class, don't use "self" keyword
+# class method - use @classmethod decorator and pass cls as first arg, can only access class attribute

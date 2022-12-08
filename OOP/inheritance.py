@@ -53,3 +53,55 @@ m.say_hello()
 
 o = Owner("Arsalon", "Owner", "100000000")   
 o.say_hello()
+
+
+#multiple inheritance
+class A:
+    pass
+    
+class B:
+    def __init__(self):
+        print("B")
+    
+# Both A, B - parent, super classes however the order of init () called depends on first listed 
+# method resolution order - start in main class, look at first super class, second superclass 
+# super () - references all classes inherited from but start looking from first listed, if not present, go to next class
+class C(A, B):
+    def __init__(self):
+        super().__init__()
+        print("C")
+    
+c = C()
+
+
+class Animal:
+    def __init__(self, age, weight, height):
+        self.age = age
+        self.weight = weight
+        self.height = height 
+    
+    
+class Mammal(Animal):
+    def __init__(self, age, weight, height, sex):
+        super().__init__(age, weight, height)
+        self.sex = sex 
+    
+    
+class Reptile(Animal): 
+    def __init__(self, age, weight, height, legs=4):
+        super().__init__(age, weight, height)
+        self.legs = legs 
+    
+class Monkey(Mammal):
+    def __init__(self, age, weight, height, sex, color, fingers):
+        super().__init__(age, weight, height, sex)
+        self.fingers = 5
+        self.color = color 
+     
+
+class Lizard(Reptile):
+    def __init__(self, age, weight, height, legs, color):
+        super().__init__(age, weight, height, legs)
+        self.color = color
+        self.tail = True  
+    

@@ -51,3 +51,20 @@ game = RandomGuesser(2)
 game.start()
 
 
+class AbstractAnimal: 
+    def sleep(self):
+        print('ZzzZzz')
+        
+    def animal_sound(self):
+        raise NotImplementedError("You must provide an implementation for animal sound")
+    
+    def wake_up(self):
+        self.animal_sound()
+        print('I am awake!')
+
+class Lion(AbstractAnimal):
+    def animal_sound(self):
+        print('Roar!')
+        
+lion = Lion()
+lion.animal_sound()

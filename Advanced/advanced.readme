@@ -1,0 +1,5 @@
+# Modules and Packages
+# Helps us organize our code 
+# Module - any python file ending in .py
+# Package - special directory containing python modules (files) and __init__.py module 
+# can import variables, functions, classes 

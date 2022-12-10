@@ -1,3 +1,4 @@
+# overload the addition operator 
 class Page:
     def __init__(self, words, page_number):
         self.words = words
@@ -13,7 +14,8 @@ page1 = Page("Arsalon is a good teacher! ", 1)
 page2 = Page("He's also handsome.", 2)
 page3 = page1 + page2
 print(page3.words, page3.page_number)
- 
+
+# overload the multiplication and subtraction operator
 class StoreItem:
     TAX = 0.12
     
@@ -37,3 +39,24 @@ discounted_bread = bread - 2
 print(discounted_bread.price)
 discounted_bread_2 = bread * 0.8
 print(discounted_bread_2.price)
+
+# overload - division operators, len operator
+class Line:
+    def __init__(self, point1, point2):
+        self.point1 = point1
+        self.point2 = point2
+        
+    def __truediv__(self, factor):
+        new_point1 = (self.point1[0] / factor, self.point1[1] / factor) #Each point has x, y coords [x, y]
+        new_point2 = (self.point2[0] / factor, self.point2[1] / factor)
+        return Line(new_point1, new_point2)
+    
+    #integer division
+    def __floordiv__(self, factor):
+        new_point1 = (self.point1[0] // factor, self.point1[1] / factor) #Each point has x, y coords [x, y]
+        new_point2 = (self.point2[0] // factor, self.point2[1] / factor)
+        return Line(new_point1, new_point2)
+
+line1 = Line((10, 5), (20, 9))
+line2 = line1 // 2
+print(line2.point1, line2.point2)

@@ -99,3 +99,14 @@ associated with class, doesn't have access to instance attributes, not associate
 # Abstract classes
 # never has any instance, acts as parent class to other classes in program
 # contains common implementation details for classes in program
+
+# Interface
+# like an abstract class but contains no implementation details at all
+# no code besides method definition and not implemented errors 
+# very useful for java (strongly typed)
+# in python, not truly an interface (faking it)
+
+# Operator Overloading
+# implement custom behavior like built in python objects (Ex. adding two page objects together)
+# double underscore methods "dunder methods" 
+# length, indexing, adding, subtracting, iterating, comparing (can implement on your own class)

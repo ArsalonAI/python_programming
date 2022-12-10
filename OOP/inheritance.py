@@ -8,7 +8,6 @@ class Person:
     def say_hello(self):
         print(f"Hi my name is {self.first_name} {self.last_name}")
 
-# Person - super class 
 # Employee - child class, derived class, inherits from Person class
 class Employee (Person):
     #over-ride constructor of super class 

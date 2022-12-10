@@ -1,4 +1,4 @@
-from functions import foo, bar, MyClass
+from functions import *
 
 foo()
 bar()

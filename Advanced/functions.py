@@ -1,3 +1,5 @@
+from modules_packages import func
+
 def foo():
     print("foo")
     

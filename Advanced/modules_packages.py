@@ -1,7 +1,7 @@
-import functions
+import functions as f
 
-functions.foo()
-functions.bar()
+f.foo()
+f.bar()
 
-print(functions.MyClass.test())
+print(f.MyClass.test())
 

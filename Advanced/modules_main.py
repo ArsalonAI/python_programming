@@ -1,11 +1,11 @@
-import my_package
-from my_package.functions import foo, bar, MyClass
+from my_package import *
+
 
 foo()
 bar()
-print(MyClass())
 
-
+a_func()
+b_func()
 
 
 

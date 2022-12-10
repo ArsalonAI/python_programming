@@ -93,15 +93,16 @@ class Reptile(Animal):
         self.legs = legs 
     
 class Monkey(Mammal):
+    fingers = 5
+    
     def __init__(self, age, weight, height, sex, color, fingers):
         super().__init__(age, weight, height, sex)
-        self.fingers = 5
         self.color = color 
      
 
 class Lizard(Reptile):
+    tail = True 
     def __init__(self, age, weight, height, legs, color):
         super().__init__(age, weight, height, legs)
         self.color = color
-        self.tail = True  
     

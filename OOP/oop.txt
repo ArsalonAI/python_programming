@@ -82,3 +82,20 @@ associated with class, doesn't have access to instance attributes, not associate
 # function that belongs to class, organize related code, utility code inside specific classes
 # many classes don't initialize, just contain static methods 
 # should work independtly of any other attributes (technically can access instance/class methods but DONT)
+
+
+# Inheritance - one class can inherit functionality of another class 
+# Allows us to have common functionality of all classes stored in one place
+# Allow related classes re-use functionality 
+# easier to modify and change, less code duplication (changes in one place)
+# polymorphism - inheritied methods can be over-riden depending on context 
+# parent class, base class, super class  -  Person
+# child class, derived class, sub - Employee 
+# use the rule "is a " to determine if it's a valid Inheritance
+# Manager is a Employee, True
+# Person is a Owner, False (some people are not owners)
+
+
+# Abstract classes
+# never has any instance, acts as parent class to other classes in program
+# contains common implementation details for classes in program

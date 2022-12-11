@@ -1,15 +1,20 @@
-#negative or positive whole number
-int 8 -9
+#Integer - negative or positive whole number
+i = 8 
+i1 = -9 
 
 
-#negative or positive number, contains a decimal point
-float 2.8 -4.5
+#Float - negative or positive number, contains a decimal point
+f = 2.9
+f1 = - 2.915 
 
-#string is a quotation marks
-str "hello" "2" 
 
-#true/false
-bool True 
+#String - characters 
+s = "hello" 
+s1 = "2" 
 
-#signifies emptiness, placeholder 
-None 
+#Boolean - T/F
+c = True 
+c1 = False
+
+#Signifies emptiness, placeholder 
+t = None 

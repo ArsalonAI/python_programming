@@ -1,6 +1,3 @@
-# operator is a symbol like "+" or "-"
-# expression is some operator (+/-) applied to some opperands (y, x) 
-
 # operands 
 a = 2 
 b = 3
@@ -18,8 +15,6 @@ print(f)
 
 x = 10 
 y = 2 
-
-
 exponential_result = x ** y 
 print(exponential_result)
 
@@ -37,7 +32,7 @@ print(modulus_division)
 
 ''' 
 Order of Operations
-1. Brackets/Parathensis
+1. Brackets/Parenthesis
 2. Exponents
 3. Multiplication and Division and Modulus 
 4. Addition / Substraction 
@@ -58,3 +53,4 @@ print (result_two)
 # (5 + 11 - 4) ^ (2 - (7/2) // 4)
 # 12 ^ (2 - (3.5 / 4)) 
 # result = 12 ^ 0 = 1 
+

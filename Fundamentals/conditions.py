@@ -1,66 +1,63 @@
-# conditions
 
-# equal to comparision 
-cond = 2 == 3 # assign value of condit to condition
-print (cond)
+# Comparision operator  
+condition_one = 2 == 3 #expect False
+print (condition_one)
 
-# not equal to 
+# NOT equal 
 x = 3.1
 y = 3
-cond2 = x != y # expect value to be False
+cond2 = x != y # expect True
 print(cond2)
 
-# greater than 
-
+# Greater Than
 t = 10
 z = 56
-tz = z > t # expect True
-print (tz) 
+t_z = z > t # expect True
+print (t_z) 
 
-
-# less than 
+# Less Than 
 a = 10 
 b = 9 
+a_b = a < (b + 5) # expect True 
+print (a_b)
 
-cond3 = a < b + 5 # expect True - can add to the expression with more operands 
-print (cond3)
-
-# less than or equal
-
+# Less Than or Equal
 e = 10
 f = 15
-ef = e <= f # expect True
-print (ef) 
+e_f = e <= f # expect True
+print (e_f) 
 
-
-
-# greater than or equal 
+# Greater than or equal 
 c = 10
 d = 15
 cd = c >= d # expect False 
 print (cd) 
 
-# compare int and str together, can do equivalents but not > < 
-condstr = 'hello' == 6
-print ('the answer is ', condstr)
+# Compare 'int' and 'str' together
+str_condition_one = 'hello' == 6
+print ('result of comparing an `int` and a `string` ', str_condition_one) #Expect False 
 
-# compare strings
+# Compare strings - equivalence
 str1 = "hello"
-str2 = "Hello"
+str2 = "hello"
 
-str_condition = str1 == str2 # expect false
-print (str_condition)
+str_condition = str1 == str2 # expect True
+print ('Result of comparing two strings,' , str_condition)
 
-# comparing strings > less or greater than (compares ASCII characters)
-print (ord("A")) # gives the unicode value for the letter (ASCII code)
-print(ord("B"))
-print("the letter for ASCI code 65 is", chr(65)) #chr() function returns the letter given the ASCII code as an arg
+# Compare Strings for Less Than / Greater Than
+# Converst to ASCII character (an int value) then compares int values
+# ord() fn gives the unicode value (int value representing ASCII code) when a char is passed
+# chr() fn returns the letter when int representing the ASCII code is passed as an arg
 
-str3 = "A"
-str4 = "B"
-str_condition2 = str3 > str4 
-print(str_condition2)
+print('the ASCII for letter `A` is', ord("A")) 
+print('the ASCII for letter `B` is', ord("B"))
+print('the ASCII for letter `C` is', ord("C"))
+print('the ASCII for letter `Z` is', ord("Z"))
+print('the ASCII for letter `a` is', ord("a")) 
+print('the ASCII for letter `z` is', ord("z")) 
+print("the letter for ASCI code 65 is", chr(65)) 
 
-print(ord("m"))
-print(ord("l"))
-print(ord("z"))
+char_one = "A"
+char_two = "B"
+str_comparision = char_one < char_two
+print('result of comparing two characters is, ' , str_comparision)

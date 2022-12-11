@@ -1,4 +1,4 @@
-from my_package import *
+from main_package import *
 
 
 foo()
@@ -6,6 +6,3 @@ bar()
 
 a_func()
 b_func()
-
-
-

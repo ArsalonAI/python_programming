@@ -1,4 +1,5 @@
-# conditionals - if, elif - conditionally run code 
+# Conditionals - conditionally run a part of your program 
+# Syntax: if, elif 
 
 number = float(input("Enter a number: "))
 
@@ -22,15 +23,16 @@ if number2 > 0 and number2 % 2 > 0:
         print("This is another odd number")
 
 
-# one line if statement - assign a variable based on a condition 
-
+# else - one line conditional statement 
+# assign a variable based on a condition 
 x = 5 
 result = "OK" if x > 5 else "Not Ok"
 print(result)
 
 y = 6
-
 print("Hello") if y == 6 else print("not good")
+
+
 
 
 

@@ -46,7 +46,7 @@ y = [0 , 1 , 2, 3]
 print(y[-1])
 print(y[-2])
 
-# combine list using + or using "extend" method
+# combine list using `+`` or using "extend" method
 z = [ 1 , 2, 3]
 t = [ 4, 5, 6]
 combine = z + t

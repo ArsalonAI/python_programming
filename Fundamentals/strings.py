@@ -19,15 +19,12 @@ str_lowercase = str.lower()
 print(str_lowercase)
 
 # validate user input by converting to all lowercase 
-
-
 user_input = input("What is my name? ")
 
 if user_input.lower() == "arsalon":
     print("correct")
 else: 
     print("nope, not correct")
-
 
 
 # Capitalize first letter
@@ -39,13 +36,11 @@ is_present = "a" in str2
 print(is_present)
 
 # check if a string contains integer digits - False if has characters or floats 
-
 str3 = "2009"
 is_integer = str3.isdigit()
 print(is_integer)
 
 # convert user input into integer 
-
 num = input("Enter a number: ")
 
 if num.isdigit():
@@ -57,7 +52,6 @@ else:
 
 
 # split method - split string into individual elements based on deliminator, deliminator is removed (default it's a space)
-
 s = "Hello I am Arsalon"
 words = s.split()
 
@@ -69,27 +63,23 @@ words2 = s2.split(",")
 print(words2)
 
 # replace - replace method takes two args - arg1 character in current string to replace, arg2 with new character
-
 s3 = "Hello,this,is,an,example"
 new_str3 = s3.replace(",", "|") 
 print(new_str3)
 
 
 # f string - python 3.6 feature (new) - embed variables inside strings (complex output that contains variables)
-
 name = input("Enter your name: ")
 output = f" Hello, {name}!, {name}, {10 + 5} Thanks! " 
 print(output)
     
 
 # string multiplication - multiple strings - repeats string by multiplier
-
 s = "hello"
 s3 = s * 3
 print(s3)
 
 # multi line strings 
-
 multi_line_string = """
 Hello
 this is a multi
@@ -100,7 +90,6 @@ not a comment
 print(multi_line_string)
 
 # JOIN - combine list into a long string
-
 str_list = ["A", "R", "S", "A", "L", "o", "n"]
 
 combined_str = "-".join(str_list)
@@ -127,8 +116,6 @@ if word_one in word_two:
     print("The first word is contained in the second one")
 else: 
     print("The first word isn't contained in the second one")
-
-
 
 # Excercise - 
 sentence = input("Enter a sentence: ")

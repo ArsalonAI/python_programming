@@ -1,31 +1,34 @@
-# logical operators - combine or chain conditions together
+# Conditions that use `AND`, `OR`, and `NOT` are compound conditions
 
+# Order of Execution (Order of Operations):
+
+# 1) Parenthesis 
+# 1) Conditional / Comparision Operators (>=  <  True  False)
+# 1) NOT
+# 2) AND
+# 3) OR
+
+
+# AND - only evaluates to true if both left + right are True 
 a = 2
 b = 4
-
-# and - only evaluates to true if both left + right are True 
 and_condition = a < b and b > 0 and True
 print(and_condition)
 
-# or - checks if either side has true, if both left/right are False, evaluates to False
+# OR - checks if either side has true, if both left/right are False, evaluates to False
 c = 10
 d = 5
 
 or_condition = c < 0 or c > d or d == 5
 print(or_condition)
 
-# not - negates or swaps value of condition
+# NOT - negates or swaps value of condition
 e = 10
 f = 3
 not_condition = not(e > f) # e > f is True, not operator negates to False 
 print(not_condition)
 
-# order of operations -
-# 1) parenthesis 
-# 1) conditional / comparision operators (greater than / less than)
-# 1) Not 
-# 2) And 
-# 3) Or 
+
 compound_one = True or False and not True or False 
 print(compound_one)
 
@@ -35,7 +38,6 @@ print(compound_two)
 # False and True or True or True
 # False or True or True
 # True 
-
 
 #What is DeMorgan's Law? 
 # swap the sign in the parenthesis and apply the not to both operands 
@@ -80,9 +82,6 @@ T T -> False or False and True -> False
 # not (x) or not(not(y) or not (z))
 # not (x) or not(not(y)) and not(not(z))
 # not (x) or (y) and (z)
-#
-
-
 
 # example - x, y, z are always True or False, respectively. There are 8 combinations in the truth table. 
 # construct a truth table and determine how many possibilities lead to True for the below expression

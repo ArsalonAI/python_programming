@@ -1,5 +1,4 @@
-from main_package import *
-
+from Packages import *
 
 foo()
 bar()

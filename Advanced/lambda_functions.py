@@ -29,3 +29,10 @@ print(result(4)) # call the second fn and pass the final arg
 result_two = mul(4)(4) # chain fn calls, whatever fn is returned w/ first arg, second arg is passed and second fn called
 print(result_two)
 
+# Excercises
+
+add_values = lambda x, y, z: x + y + z # takes three ints/floats, returns sum
+
+max_length = lambda string1, string2: max(len(string1), len(string2)) # takes two strings, returns max of lengths
+
+create_set = lambda list1, list2: set(list1).union(list2) # takes two lists, returns a set of both lists 

@@ -16,5 +16,10 @@ print(new_lst_two)
 # Map fn for nested lists 
 nested_list = [[1, 2, 6] , [3, 4, 8, 9] , [5, 6, 7]] 
 nested_sum = list(map(lambda x: sum(x), nested_list)) # each arg is a list, returns a list of sum of elements
-print(nested_sum)
+print('the sum of the nested list is', nested_sum)
 
+
+# Filter - gives values that satisify a specific constraint - pass fn that returns T/F (specifies to keep item or skip)
+filter_list = filter(lambda x: sum(x) > 10, nested_list) # only keep lists with elements that sum greater than 10
+for el in filter_list:
+    print('this sublist is greater than 10', el)

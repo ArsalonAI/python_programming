@@ -24,3 +24,10 @@ for el in filter_list:
 # Using Map and Filter together - map values to sums
 map_filter_list = filter(lambda y: y % 2 == 0, map(lambda x: sum(x), nested_list)) #map returns a collection of sums, filter selects those sums that are even nums
 print(list(map_filter_list))
+
+
+# write code that takes a list and returns the even squares of all elements in the list
+
+excercise_list = [1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]
+new_excercise_list = filter(lambda y: y % 2 == 0, map(lambda x: x **2, excercise_list))
+print(list(new_excercise_list))

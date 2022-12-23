@@ -4,6 +4,9 @@
     # enclosing function - contains another function inside of it
     # nested function - function defined inside another function 
 
+from re import X
+
+
 def outer(x):
     def inner(y):
         print(x + y) # local to outter function scope (function defined inside function)
@@ -68,3 +71,22 @@ def counter(start):
 
 
 print(counter(2)(3)) # start at 2, increment by 3
+
+
+# Closure Example - nonlocal keyword references closest variable within nested structure (closest enclosing function)
+def outer_example():
+    def inner():
+        def inner2():
+            nonlocal x 
+            x = 2
+            print("Inner2 func x value:", x)
+            
+        x = 3
+        inner2()
+        print("Inner func x value:", x)
+        
+    x = 4
+    inner()
+    print("Outer func x value:", x)
+    
+outer_example()

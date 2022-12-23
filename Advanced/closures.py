@@ -40,3 +40,30 @@ def outer_four(x):
     return inner
 
 outer_four(15)()
+
+def collection():
+    
+    lst = [] # scoped to enclosing function, accessible within all nested function scopes
+    
+    def inner(value):
+        lst.append(value)
+        return lst
+    return inner
+
+add_value = collection()
+print(add_value(1))
+print(add_value(2))
+print(add_value(3))
+
+# Closure example - enclosing function "free variable" used w/in nested function cannot be directly mutated 
+def counter(start):
+    count = start # immutable free variable (enclosing function scope), accessible by nested functions
+    
+    def increment(value):
+        count += value # not same as free variable "count" this creates a new variable, locally accessible
+        return count 
+    
+    return increment
+
+
+print(counter(2)(3)) # start at 2, increment by 3

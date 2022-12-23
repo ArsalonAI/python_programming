@@ -55,12 +55,13 @@ print(add_value(1))
 print(add_value(2))
 print(add_value(3))
 
-# Closure example - enclosing function "free variable" used w/in nested function cannot be directly mutated 
+# Closure example - enclosing function "free variable" used w/in nested function cannot be directly mutated, use nonlocal keyword
 def counter(start):
     count = start # immutable free variable (enclosing function scope), accessible by nested functions
     
     def increment(value):
-        count += value # not same as free variable "count" this creates a new variable, locally accessible
+        nonlocal count # allows us to access enclosing function free variable w/o creating a locally defined variable within nested function scope
+        count += value 
         return count 
     
     return increment

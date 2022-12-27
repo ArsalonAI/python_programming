@@ -67,3 +67,27 @@ foo(1, 7, z = 10)
 loop()  
 print(get_max(1, 2, 3)) 
 print_numbers(100)   
+
+
+# Write a decorator that prints the return value of any function it decorates and works on any func regardless of number of params
+def print_return_value(func):
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        print(result)
+        return result
+
+    return wrapper 
+
+# write a decorator that adds 1 to the result of add_values function
+def add_one(func):
+    def wrapper(*args):
+        result = func(*args)
+        return result + 1
+    return wrapper
+
+@print_return_value
+@add_one
+def add_values(x, y):
+    return x + y
+
+add_values(2, 3)

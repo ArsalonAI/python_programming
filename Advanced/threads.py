@@ -13,3 +13,14 @@ thread2.start()
 print("main thread")
 print('number of threads running', threading.active_count())
 thread1.join() #gives control back to thread1
+
+# Threading Example
+
+def print_values(values, delay):
+    for item in values:
+        print(item)
+        sleep(delay)
+        
+
+thread_one = threading.Thread(target=print_values, args=([1, 3, 5], 0.2))
+thread_two = threading.Thread(target=print_values, args=([2,4], 0.3))
